@@ -7,6 +7,14 @@ const Index = function(){
     return(
         <div className="flex w-full h-full border-0 flex-col items-start justify-start">
             <SectionContainer />
+            <SectionContainer />
+            <SectionContainer />
+            <SectionContainer />
+            <SectionContainer />
+            <SectionContainer />
+            <SectionContainer />
+            <SectionContainer />
+            <SectionContainer />
             <WorkInProgress />
             <Footer />
         </div>
