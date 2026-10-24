@@ -1,5 +1,6 @@
 
 .section-container {
+    display: flex;
     padding: 60px 120px;
     border-top: 2px solid rgba(0, 255, 136, 0.125);
     border-bottom: 2px solid rgba(0, 255, 136, 0.125);
