@@ -1,0 +1,11 @@
+
+.section-container {
+    padding: 60px 120px;
+    border-top: 2px solid rgba(0, 255, 136, 0.125);
+    border-bottom: 2px solid rgba(0, 255, 136, 0.125);
+    width: 100%;
+    transition: background-color 0.25s ease-in-out 0.1s;
+}
+.section-container:hover {
+    background-color: rgba(0, 255, 136, 0.0627);
+}
