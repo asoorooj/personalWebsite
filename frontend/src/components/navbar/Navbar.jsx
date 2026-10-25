@@ -1,17 +1,10 @@
 import "./navbar.css";
+import {useScrollToComponent} from "../../hooks/useScrollToComponent.js";
 
 
 const Navbar = function() {
 
-    const scrollToComponent = function (id) {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        }
-    };
+    const scrollToComponent = useScrollToComponent();
 
     return(
         <div className="navbar">

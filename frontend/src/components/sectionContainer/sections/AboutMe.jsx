@@ -1,13 +1,9 @@
 import SectionContainer from "../SectionContainer.jsx";
-import {useState} from "react";
+import {useHover} from "../../../hooks/useHover.js";
 
 const AboutMe = function () {
 
-    const [hover, setHover] = useState(false);
-
-    const onHover = () => {
-        setHover(!hover);
-    };
+    const [hover, onHover] = useHover();
 
     return(
         <SectionContainer onHover={onHover} id={"aboutMeSection"}>

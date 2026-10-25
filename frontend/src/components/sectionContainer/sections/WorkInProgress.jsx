@@ -1,14 +1,10 @@
-import {useState} from "react";
 import SectionContainer from "../SectionContainer.jsx";
 import "../../../index.css";
+import {useHover} from "../../../hooks/useHover.js";
 
 const WorkInProgress = function(){
 
-    const [hover, setHover] = useState(false);
-
-    const onHover = () => {
-        setHover(!hover);
-    };
+    const [hover, onHover] = useHover();
 
     return(
         <SectionContainer onHover={onHover} id={"workInProgressSection"}>
