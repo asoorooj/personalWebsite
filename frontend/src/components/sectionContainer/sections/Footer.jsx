@@ -1,4 +1,4 @@
-import SectionContainer from "../../SectionContainer.jsx";
+import SectionContainer from "../SectionContainer.jsx";
 import {memo, useState} from "react";
 import {Link} from "react-router";
 

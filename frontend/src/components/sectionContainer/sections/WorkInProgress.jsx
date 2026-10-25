@@ -1,6 +1,6 @@
 import {useState} from "react";
-import SectionContainer from "../../SectionContainer.jsx";
-import "../../../../index.css";
+import SectionContainer from "../SectionContainer.jsx";
+import "../../../index.css";
 
 const WorkInProgress = function(){
 

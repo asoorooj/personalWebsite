@@ -26,6 +26,8 @@
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
+  --standard-transition: all 250ms ease-in-out;
+
   font: 18px/145% var(--geist-font-family);
   letter-spacing: 0.18px;
   color-scheme: light dark;
@@ -35,6 +37,43 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.button.solid{
+  border: 1px solid var(--secondary-text);
+  padding: 16px 30px;
+  border-radius: 2px;
+  background: var(--secondary-text);
+  color: var(--primary-bg);
+  font-family: var(--geist-mono-font-family), Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  white-space: nowrap;
+  transition: var(--standard-transition);
+  cursor: pointer;
+}
+
+.button.solid:hover{
+  border: 1px solid #00B963;
+  background: #00B963;
+}
+
+.button.hollow{
+  border: 1px solid var(--secondary-text);
+  padding: 16px 30px;
+  border-radius: 2px;
+  background: transparent;
+  color: var(--secondary-text);
+  font-family: var(--geist-mono-font-family), Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  white-space: nowrap;
+  transition: var(--standard-transition);
+  cursor: pointer;
+}
+
+.button.hollow:hover{
+  background: rgba(0, 255, 136, 0.25);
 }
 
 /*@media (prefers-color-scheme: dark) {*/
