@@ -7,7 +7,12 @@ const Skills = function() {
 
     return(
         <SectionContainer onHover={onHover} id={"skillsSection"}>
-            <span className={"sectionHeader"}>Skills</span>
+            <div className={"border-0 border-white flex flex-col"}>
+                <span className={"sectionHeader"}>Skills</span>
+                <div className={"border-0 border-white flex p-4"}>
+                    hi
+                </div>
+            </div>
         </SectionContainer>
     );
 
