@@ -13,7 +13,7 @@
 }
 
 .sectionHeader{
-    font-family: var(--geist-mono-font-family);
+    font-family: var(--geist-mono-font-family), sans-serif;
     color: var(--secondary-text);
     font-weight: 900;
     font-size: 2.5em;
