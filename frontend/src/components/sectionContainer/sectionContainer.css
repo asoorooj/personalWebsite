@@ -1,3 +1,4 @@
+@import "../../index.css";
 
 .section-container {
     display: flex;
@@ -9,4 +10,11 @@
 }
 .section-container:hover {
     background-color: rgba(0, 255, 136, 0.0627);
+}
+
+.sectionHeader{
+    font-family: var(--geist-mono-font-family);
+    color: var(--secondary-text);
+    font-weight: 900;
+    font-size: 2.5em;
 }

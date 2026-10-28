@@ -22,11 +22,11 @@
   --geist-font-family: 'Geist Variable', sans-serif;
   --geist-mono-font-family: 'Geist Mono Variable', monospace;
 
+  --standard-transition: all 250ms ease-in-out;
+
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
-
-  --standard-transition: all 250ms ease-in-out;
 
   font: 18px/145% var(--geist-font-family);
   letter-spacing: 0.18px;

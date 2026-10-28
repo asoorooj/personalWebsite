@@ -3,7 +3,7 @@ import {useHover} from "../../../hooks/useHover.js";
 
 const AboutMe = function () {
 
-    const [hover, onHover] = useHover();
+    const [isHovered, onHover] = useHover();
 
     return(
         <SectionContainer onHover={onHover} id={"aboutMeSection"}>
@@ -12,11 +12,11 @@ const AboutMe = function () {
                 <span className={"text-[var(--secondary-text)] leading-none my-1 text-[4em] font-black"}
                       style={{fontFamily:"var(--geist-mono-font-family)"}}>ANTHONY</span>
                 <span className={"text-white leading-none text-[1.5em] font-semibold"}>Full Stack Developer</span>
-                <span className={`leading-none text-[1em] font-normal my-4 ${hover ? "text-[var(--secondary-text)]" : ""} transition duration-250 ease-in-out`}
+                <span className={`leading-none text-[1em] font-normal my-4 ${isHovered ? "text-[var(--secondary-text)]" : ""} transition duration-250 ease-in-out`}
                     style={{fontFamily:"var(--geist-mono-font-family)"}}>
                     Creating various tools with the latest technologies.
                 </span>
-                <span className={`leading-none text-[1em] font-normal my-0 leading-tight ${hover ? "text-[var(--secondary-text)]" : ""} transition duration-250 ease-in-out`}
+                <span className={`leading-none text-[1em] font-normal my-0 leading-tight ${isHovered ? "text-[var(--secondary-text)]" : ""} transition duration-250 ease-in-out`}
                       style={{fontFamily:"var(--geist-mono-font-family)"}}>
                     Exploring different aspects of computing such application development,
                     machine learning and AI, hardware and graphics programming, etc.
