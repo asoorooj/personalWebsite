@@ -11,7 +11,20 @@ const Index = function(){
             {/*<SectionContainer />*/}
             <AboutMe />
             <Skills>
-                <SkillCard header={"Samba"} skills={["hi", "bye"]}/>
+                    <SkillCard header={"Programming Languages"}
+                               skills={["Java", "JavaScript", "TypeScript", "Python", "SQL", "C", "C++", "HTML", "CSS"]}/>
+                    <SkillCard header={"Frontend & Backend"}
+                               skills={["React", "React Native", "Spring Boot", "Flask", "Express.js", "RESTful APIs", "SOAP APIs",
+                                   "JUnit", "Mockito", "Vitest", "Github Actions"]}/>
+                    <SkillCard header={"Data Technologies"}
+                               skills={["Oracle", "MySQL", "PostgreSQL", "MongoDB", "Firebase",
+                                   "JPA/Hibernate", "NumPy", "pandas", "Hadoop", "Spark"]}/>
+                <SkillCard header={"Dev Tools"}
+                           skills={["Git", "Jira", "Confluence", "Docker", "AWS", "CloudWatch", "Figma", "Red Hat Openshift",
+                               "Postman", "Microsoft Office Suite"]}/>
+                <SkillCard header={"Computer Science"}
+                           skills={["Data Structures & Algorithms", "Relational Databases", "Database Schema Design",
+                               "CRUD Operations", "Data Cleaning", "CI/CD"]}/>
             </Skills>
             <WorkInProgress />
             <Footer />

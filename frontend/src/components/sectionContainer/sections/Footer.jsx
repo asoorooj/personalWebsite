@@ -3,41 +3,49 @@ import {memo, useState} from "react";
 import {Link} from "react-router";
 import {useScrollToComponent} from "../../../hooks/useScrollToComponent.js";
 import {useHover} from "../../../hooks/useHover.js";
+import {useHoveredContext} from "../../../hooks/useHoveredContext.jsx";
 
 
 const Footer = function(){
 
-    const [isHovered, onHover] = useHover();
+    return(
+        <SectionContainer>
+            <FooterSection />
+        </SectionContainer>
+    );
+};
+
+const FooterSection = function(){
+
+    const [isHovered, onHover] = useHoveredContext();
 
     return(
-        <SectionContainer onHover={onHover}>
-            <div className="w-full h-auto border-0 border-white grid grid-cols-5 gap-[1em]">
-                <div className="w-full h-auto col-span-2 flex flex-col items-start justify-start gap-2">
-                    <span className="text-[16px] font-[600] text-[var(--secondary-text)]">Anthony Sooroojbally</span>
-                    <p className={`text-[14px] font-[300] text-[var(${isHovered ? "--primary-text" : ""})] transition duration-250 ease-in-out`}>
-                        What do i need to say about myself???
-                    </p>
-                </div>
-                <LinksColumn header={"Navigation"} hover={isHovered}
-                    links={[
-                        {text: "About Me", href:"aboutMeSection"},
-                        {text: "Skills", href:"skillsSection"}, //scrollToComponent
-                        {text: "Experience", href:"workInProgressSection"},
-                        {text: "Projects", href:"workInProgressSection"}
-                    ]}/>
-                <LinksColumn header={"Socials & Links"} hover={isHovered}
-                     links={[
-                         {text: "LinkedIn", link: "https://www.linkedin.com/in/anthony-sooroojbally-11a048340/", newTab: true},
-                         {text: "GitHub", link: "https://github.com/asoorooj", newTab: true},
-                         {text: "Instagram", link: "/"},
-                         {text: "Figma", link: "/"}
-                     ]}/>
-                <LinksColumn header={"Contact Me"} hover={isHovered}
+        <div className="w-full h-auto border-0 border-white grid grid-cols-5 gap-[1em]">
+            <div className="w-full h-auto col-span-2 flex flex-col items-start justify-start gap-2">
+                <span className="text-[16px] font-[600] text-[var(--secondary-text)]">Anthony Sooroojbally</span>
+                <p className={`text-[14px] font-[300] text-[var(${isHovered ? "--primary-text" : ""})] transition duration-250 ease-in-out`}>
+                    What do i need to say about myself???
+                </p>
+            </div>
+            <LinksColumn header={"Navigation"} hover={isHovered}
+                         links={[
+                             {text: "About Me", href:"aboutMeSection"},
+                             {text: "Skills", href:"skillsSection"}, //scrollToComponent
+                             {text: "Experience", href:"workInProgressSection"},
+                             {text: "Projects", href:"workInProgressSection"}
+                         ]}/>
+            <LinksColumn header={"Socials & Links"} hover={isHovered}
+                         links={[
+                             {text: "LinkedIn", link: "https://www.linkedin.com/in/anthony-sooroojbally-11a048340/", newTab: true},
+                             {text: "GitHub", link: "https://github.com/asoorooj", newTab: true},
+                             {text: "Instagram", link: "/"},
+                             {text: "Figma", link: "/"}
+                         ]}/>
+            <LinksColumn header={"Contact Me"} hover={isHovered}
                          links={[
                              {text: "sooroojballyanthony@gmail.com", link: "/"}
                          ]}/>
-            </div>
-        </SectionContainer>
+        </div>
     );
 };
 
