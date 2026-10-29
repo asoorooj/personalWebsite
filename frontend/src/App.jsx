@@ -8,7 +8,7 @@ function App() {
 
   return (
       <BrowserRouter>
-          <div className="border-0 w-screen min-w-[1000px] h-screen bg-[var(--primary-bg)] overflow-y-auto flex flex-col scrollbar-none">
+          <div className="border-0 border-blue-200 w-screen min-w-[1000px] h-screen bg-[var(--primary-bg)] overflow-y-auto flex flex-col scrollbar-none overflow-x-hidden">
             <Navbar/>
             <Routes>
               <Route path={"/"} element={<Index />}/>

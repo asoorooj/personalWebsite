@@ -47,14 +47,20 @@ const LinksColumn = function ({header, links, hover}) {
 
     return(
         <div className="w-full h-auto flex flex-col items-start justify-start gap-2 text-[14px]">
-            <span className={`text-[${hover ? "var(--secondary-text)" : ""}] font-[600] transition duration-250 ease-in-out`}>{header}</span>
+            <span className={`text-[${hover ? "var(--secondary-text)" : ""}] font-[600]`}
+                  style={{transition: "var(--standard-transition)"}}
+            >{header}</span>
             {links?.map((link) => (<div key={`${link?.text}`}>
                 {
                     link?.link ?
-                        <Link to={link.link ?? "/"} target={link?.newTab ? "_blank" : ""} className={"hover:text-[var(--primary-text)] transition duration-250 ease-in-out"}>{link?.text}</Link>
+                        <Link to={link.link ?? "/"} target={link?.newTab ? "_blank" : ""} className={"hover:text-[var(--primary-text)]"}
+                              style={{transition: "var(--standard-transition)"}}
+                        >{link?.text}</Link>
                             :
                         link?.href &&
-                            <button onClick={()=>{scrollToComponent(link.href);}} className={"hover:text-[var(--primary-text)] transition duration-250 ease-in-out cursor-pointer"}>{link?.text}</button>
+                            <button onClick={()=>{scrollToComponent(link.href);}} className={"hover:text-[var(--primary-text)] cursor-pointer"}
+                                style={{transition: "var(--standard-transition)"}}
+                            >{link?.text}</button>
                 }
             </div>))}
         </div>
