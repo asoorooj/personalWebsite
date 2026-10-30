@@ -8,7 +8,7 @@ const Skills = function({children}) {
 
     return(
         <SectionContainer onHover={onHover} id={"skillsSection"} sectionHeader={"Skills"}>
-            <div className={"grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] w-full gap-[16px]"}>
+            <div className={"grid grid-cols-1 w-full gap-[16px]"}>
                 {children}
             </div>
         </SectionContainer>
@@ -23,7 +23,7 @@ const SkillCard = function({skills, header}) {
     const [isSectionHovered] = useHoveredContext();
 
     return(
-        <div className={`border-2 w-full h-fit min-h-[160px] p-[16px] bg-[#0F0512] border-[#847C88] rounded-[4px] flex flex-col gap-[10px]
+        <div className={`border-2 w-fit h-fit min-h-[0] p-[1em] bg-[#0F0512] border-[#847C88] rounded-[4px] flex flex-col gap-[10px]
             ${isHovered ? "border-[#687971] bg-[#04190F]" : ""}`}
              style={{transition: "var(--standard-transition)"}}
             onMouseEnter={onHover} onMouseLeave={onHover}
