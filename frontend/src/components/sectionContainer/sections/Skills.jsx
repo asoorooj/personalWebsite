@@ -23,7 +23,7 @@ const SkillCard = function({skills, header}) {
     const [isSectionHovered] = useHoveredContext();
 
     return(
-        <div className={`border-2 flex-1 min-h-[160px] p-[16px] bg-[#0F0512] border-[#847C88] rounded-[4px] flex flex-col gap-[10px]
+        <div className={`border-2 w-full h-fit min-h-[160px] p-[16px] bg-[#0F0512] border-[#847C88] rounded-[4px] flex flex-col gap-[10px]
             ${isHovered ? "border-[#687971] bg-[#04190F]" : ""}`}
              style={{transition: "var(--standard-transition)"}}
             onMouseEnter={onHover} onMouseLeave={onHover}
@@ -43,7 +43,7 @@ const SkillCard = function({skills, header}) {
 
 const SkillBox = function({skill, isSectionHovered}) {
     return(
-        <div className={`border-[0.1em] p-[0.5em] rounded-[0.25em] flex 
+        <div className={`border-[0.1em] p-[0.25em] rounded-[0.25em] flex 
             ${isSectionHovered ? 
             "border-[var(--secondary-text)] bg-[color-mix(in_srgb,var(--secondary-text)_25%,transparent)]" : 
             "border-[var(--secondary-text)] bg-[color-mix(in_srgb,var(--secondary-text)_25%,transparent)] opacity-50"}`}

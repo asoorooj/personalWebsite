@@ -23,8 +23,8 @@ const Index = function(){
                            skills={["Git", "Jira", "Confluence", "Docker", "AWS", "CloudWatch", "Figma", "Red Hat Openshift",
                                "Postman", "Microsoft Office Suite"]}/>
                 <SkillCard header={"Computer Science"}
-                           skills={["Data Structures & Algorithms", "Relational Databases", "Database Schema Design",
-                               "CRUD Operations", "Data Cleaning", "CI/CD"]}/>
+                           skills={["Data Structures & Algorithms", "Relational Databases", "Database Schema Design", "CI/CD",
+                               "CRUD Operations", "Data Cleaning"]}/>
             </Skills>
             <WorkInProgress />
             <Footer />
