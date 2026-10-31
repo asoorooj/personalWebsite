@@ -1,6 +1,7 @@
 import SectionContainer from "../SectionContainer.jsx";
 import {useHover} from "../../../hooks/useHover.js";
 import {useHoveredContext} from "../../../hooks/useHoveredContext.jsx";
+import {useLayoutEffect, useRef, useState} from "react";
 
 const Skills = function({children}) {
 
@@ -8,7 +9,7 @@ const Skills = function({children}) {
 
     return(
         <SectionContainer onHover={onHover} id={"skillsSection"} sectionHeader={"Skills"}>
-            <div className={"grid grid-cols-1 w-full gap-[16px]"}>
+            <div className={"grid grid-cols-3 w-full gap-[16px]"}>
                 {children}
             </div>
         </SectionContainer>
@@ -22,21 +23,23 @@ const SkillCard = function({skills, header}) {
 
     const [isSectionHovered] = useHoveredContext();
 
+    const [isExtended, setExtended] = useState(false);
+
     return(
-        <div className={`border-2 w-fit h-fit min-h-[0] p-[1em] bg-[#0F0512] border-[#847C88] rounded-[4px] flex flex-col gap-[10px]
+        <div className={`border-2 w-full h-fit min-h-[0] p-[1em] bg-[#0F0512] border-[#847C88] rounded-[4px] flex flex-col gap-[10px]
             ${isHovered ? "border-[#687971] bg-[#04190F]" : ""}`}
-             style={{transition: "var(--standard-transition)"}}
-            onMouseEnter={onHover} onMouseLeave={onHover}
+             style={{transition: "var(--standard-transition)", cursor: isHovered ? "pointer" : "default"}}
+            onMouseEnter={onHover} onMouseLeave={onHover} onClick={()=>{setExtended(prev => !prev);}}
         >
             <span className={`text-[1.25em] font-[600] ${isSectionHovered ? "text-[var(--secondary-text)]" : "" }`}
                   style={{fontFamily:"var(--geist-mono-font-family)", transition: "var(--standard-transition)"}}>
                 &gt;&gt; {header}
             </span>
-            <div className={"border-0 border-white p-[0.5em] flex gap-[0.5em] flex-wrap overflow-x-hidden"}>
+            {isExtended && <div className={"border-0 border-white p-[0.5em] flex gap-[0.5em] flex-wrap overflow-x-hidden"}>
                 {skills?.map((skill) => (
                     <SkillBox skill={skill} isSectionHovered={isSectionHovered}/>
                 ))}
-            </div>
+            </div>}
         </div>
     );
 };
