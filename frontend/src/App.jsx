@@ -1,6 +1,6 @@
 import "./index.css";
 import "./App.css";
-import {BrowserRouter, Route, Routes} from "react-router";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router";
 import Index from "./pages/index/Index.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
 
@@ -11,7 +11,8 @@ function App() {
           <div className="border-0 border-blue-200 w-screen min-w-[1000px] h-screen bg-[var(--primary-bg)] overflow-y-auto flex flex-col scrollbar-none overflow-x-hidden">
             <Navbar/>
             <Routes>
-              <Route path={"/"} element={<Index />}/>
+                <Route path={"/"} element={<Index />}/>
+                <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </div>
       </BrowserRouter>
