@@ -1,13 +1,13 @@
-import SectionContainer from "../SectionContainer.jsx";
+import SectionContainerContext from "../SectionContainerContext.jsx";
 import {useHoveredContext} from "../../../hooks/useHoveredContext.jsx";
 
 const AboutMe = function () {
 
 
     return(
-        <SectionContainer id={"aboutMeSection"}>
+        <SectionContainerContext id={"aboutMeSection"}>
             <AboutMeSection />
-        </SectionContainer>
+        </SectionContainerContext>
     );
 };
 
@@ -36,6 +36,6 @@ const AboutMeSection = function (){
             </div>
         </div>
     );
-}
+};
 
 export {AboutMe as default};

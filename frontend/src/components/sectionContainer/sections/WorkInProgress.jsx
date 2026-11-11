@@ -1,4 +1,4 @@
-import SectionContainer from "../SectionContainer.jsx";
+import SectionContainerContext from "../SectionContainerContext.jsx";
 import "../../../index.css";
 import {useHover} from "../../../hooks/useHover.js";
 import {useHoveredContext} from "../../../hooks/useHoveredContext.jsx";
@@ -6,9 +6,9 @@ import {useHoveredContext} from "../../../hooks/useHoveredContext.jsx";
 const WorkInProgress = function(){
 
     return(
-        <SectionContainer id={"workInProgressSection"}>
+        <SectionContainerContext id={"workInProgressSection"}>
             <WorkInProgressSection/>
-        </SectionContainer>
+        </SectionContainerContext>
     );
 };
 

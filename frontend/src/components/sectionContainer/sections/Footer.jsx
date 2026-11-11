@@ -1,4 +1,4 @@
-import SectionContainer from "../SectionContainer.jsx";
+import SectionContainerContext from "../SectionContainerContext.jsx";
 import {memo, useState} from "react";
 import {Link} from "react-router";
 import {useScrollToComponent} from "../../../hooks/useScrollToComponent.js";
@@ -9,9 +9,9 @@ import {useHoveredContext} from "../../../hooks/useHoveredContext.jsx";
 const Footer = function(){
 
     return(
-        <SectionContainer>
+        <SectionContainerContext>
             <FooterSection />
-        </SectionContainer>
+        </SectionContainerContext>
     );
 };
 

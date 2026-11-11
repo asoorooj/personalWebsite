@@ -1,4 +1,4 @@
-import SectionContainer from "../SectionContainer.jsx";
+import SectionContainerContext from "../SectionContainerContext.jsx";
 import {useHover} from "../../../hooks/useHover.js";
 import {useHoveredContext} from "../../../hooks/useHoveredContext.jsx";
 import {useLayoutEffect, useRef, useState} from "react";
@@ -8,11 +8,11 @@ const Skills = function({children}) {
     const [isHovered, onHover] = useHover();
 
     return(
-        <SectionContainer onHover={onHover} id={"skillsSection"} sectionHeader={"Skills"}>
+        <SectionContainerContext onHover={onHover} id={"skillsSection"} sectionHeader={"Skills"}>
             <div className={"grid grid-cols-3 w-full gap-[16px]"}>
                 {children}
             </div>
-        </SectionContainer>
+        </SectionContainerContext>
     );
 
 };

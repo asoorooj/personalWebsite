@@ -2,20 +2,20 @@ import "./sectionContainer.css";
 import {HoveredProvider, useHoveredContext} from "../../hooks/useHoveredContext.jsx";
 
 
-const SectionContainer = function ({children, id, sectionHeader}){
+const SectionContainerContext = function ({children, id, sectionHeader}){
 
     return(
         <HoveredProvider>
-            <SectionContainerContext id={id} sectionHeader={sectionHeader}>
+            <SectionContainer id={id} sectionHeader={sectionHeader}>
                 {children}
-            </SectionContainerContext>
+            </SectionContainer>
         </HoveredProvider>
     );
 };
 
 
 
-const SectionContainerContext = function ({children, id, sectionHeader}){
+const SectionContainer = function ({children, id, sectionHeader}){
 
     const [isHovered, onHover] = useHoveredContext();
 
@@ -27,4 +27,4 @@ const SectionContainerContext = function ({children, id, sectionHeader}){
     );
 };
 
-export {SectionContainer as default};
+export {SectionContainerContext as default};

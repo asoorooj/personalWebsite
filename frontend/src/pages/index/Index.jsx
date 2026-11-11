@@ -1,5 +1,5 @@
 import "./index.css";
-import SectionContainer from "../../components/sectionContainer/SectionContainer.jsx";
+import SectionContainer from "../../components/sectionContainer/SectionContainerContext.jsx";
 import Footer from "../../components/sectionContainer/sections/Footer.jsx";
 import WorkInProgress from "../../components/sectionContainer/sections/WorkInProgress.jsx";
 import AboutMe from "../../components/sectionContainer/sections/AboutMe.jsx";
