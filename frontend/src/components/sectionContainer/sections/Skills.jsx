@@ -27,19 +27,27 @@ const SkillCard = function({skills, header}) {
 
     return(
         <div className={`border-2 w-full h-fit min-h-[0] p-[1em] bg-[#0F0512] border-[#847C88] rounded-[4px] flex flex-col gap-[10px]
-            ${isHovered ? "border-[#687971] bg-[#04190F]" : ""}`}
+            ${isHovered && isExtended ? "border-[#687971] bg-[#04190F]" : ""}
+            ${isSectionHovered ? "" : "opacity-50"}`}
              style={{transition: "var(--standard-transition)", cursor: isHovered ? "pointer" : "default"}}
             onMouseEnter={onHover} onMouseLeave={onHover} onClick={()=>{setExtended(prev => !prev);}}
         >
-            <span className={`text-[1.25em] font-[600] ${isSectionHovered ? "text-[var(--secondary-text)]" : "" }`}
+            <span className={`text-[1.25em] font-[600] ${isHovered ? "text-[var(--secondary-text)]" : "" }`}
                   style={{fontFamily:"var(--geist-mono-font-family)", transition: "var(--standard-transition)"}}>
                 &gt;&gt; {header}
             </span>
-            {isExtended && <div className={"border-0 border-white p-[0.5em] flex gap-[0.5em] flex-wrap overflow-x-hidden"}>
-                {skills?.map((skill) => (
-                    <SkillBox skill={skill} isSectionHovered={isSectionHovered}/>
-                ))}
-            </div>}
+            <div
+                className={`grid ${isExtended ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+                style={{ transition: "var(--standard-transition)" }}
+            >
+                <div className="overflow-hidden">
+                    <div className="border-0 border-white p-[0.5em] flex gap-[0.5em] flex-wrap">
+                        {skills?.map((skill) => (
+                            <SkillBox key={skill} skill={skill} isSectionHovered={isSectionHovered} />
+                        ))}
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
