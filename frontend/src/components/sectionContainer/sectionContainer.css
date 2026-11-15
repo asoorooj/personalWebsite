@@ -1,0 +1,23 @@
+@import "../../index.css";
+
+.section-container {
+    display: flex;
+    padding: 60px 120px;
+    border-top: 2px solid rgba(0, 255, 136, 0.125);
+    border-bottom: 2px solid rgba(0, 255, 136, 0.125);
+    width: 100%;
+    transition: background-color 0.25s ease-in-out 0.1s;
+    flex-direction: column;
+}
+.section-container:hover {
+    background-color: rgba(0, 255, 136, 0.0627);
+}
+
+.sectionHeader{
+    font-family: var(--geist-mono-font-family), sans-serif;
+    color: var(--secondary-text);
+    font-weight: 900;
+    font-size: 2.5em;
+    display: inline-block;
+    padding-bottom: 1em;
+}
