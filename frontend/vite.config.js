@@ -8,7 +8,8 @@ export default defineConfig({
   build:{
     // outDir: "../backend/src/main/resources/static",
     //temp for github pages build
-    outDir: "./dist",
+    outDir: "../docs",
+    base: "./",
     rollupOptions: {
       output: {
         entryFileNames: "assets/[name].js",
