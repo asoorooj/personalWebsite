@@ -29,10 +29,10 @@ const FooterSection = function(){
             </div>
             <LinksColumn header={"Navigation"} hover={isHovered}
                          links={[
-                             {text: "About Me", href:"aboutMeSection"},
-                             {text: "Skills", href:"skillsSection"}, //scrollToComponent
-                             {text: "Experience", href:"workInProgressSection"},
-                             {text: "Projects", href:"workInProgressSection"}
+                             {text: "About Me", scrollToHref:"aboutMeSection"},
+                             {text: "Skills", scrollToHref:"skillsSection"}, //scrollToComponent
+                             {text: "Experience", scrollToHref:"workInProgressSection"},
+                             {text: "Projects", scrollToHref:"workInProgressSection"}
                          ]}/>
             <LinksColumn header={"Socials & Links"} hover={isHovered}
                          links={[
@@ -43,7 +43,7 @@ const FooterSection = function(){
                          ]}/>
             <LinksColumn header={"Contact Me"} hover={isHovered}
                          links={[
-                             {text: "sooroojballyanthony@gmail.com", link: "/"}
+                             {text: "sooroojballyanthony@gmail.com", href: "mailto:sooroojballyanthony@gmail.com"}
                          ]}/>
         </div>
     );
@@ -65,10 +65,15 @@ const LinksColumn = function ({header, links, hover}) {
                               style={{transition: "var(--standard-transition)"}}
                         >{link?.text}</Link>
                             :
-                        link?.href &&
-                            <button onClick={()=>{scrollToComponent(link.href);}} className={"hover:text-[var(--primary-text)] cursor-pointer"}
-                                style={{transition: "var(--standard-transition)"}}
-                            >{link?.text}</button>
+                        link?.href ?
+                            <a href={link.href} className={"hover:text-[var(--primary-text)] cursor-pointer"} style={{transition: "var(--standard-transition)"}}>
+                                {link?.text}
+                            </a>
+                            :
+                            link?.scrollToHref &&
+                                <button onClick={()=>{scrollToComponent(link.scrollToHref);}} className={"hover:text-[var(--primary-text)] cursor-pointer"}
+                                    style={{transition: "var(--standard-transition)"}}
+                                >{link?.text}</button>
                 }
             </div>))}
         </div>
